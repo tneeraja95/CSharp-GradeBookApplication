@@ -21,13 +21,13 @@ namespace GradeBook.GradeBooks
 
             if(Students.Count < 5)
                 throw new InvalidOperationException();
-            if (rank < numberofStudentsPerGrade)
+            if (rank <= numberofStudentsPerGrade)
                 return 'A';
-            if (rank < numberofStudentsPerGrade * 2)
+            if (rank <= numberofStudentsPerGrade * 2)
                 return 'B';
-            if (rank < numberofStudentsPerGrade * 3)
+            if (rank <= numberofStudentsPerGrade * 3)
                 return 'C';
-            if (rank < numberofStudentsPerGrade * 4)
+            if (rank <= numberofStudentsPerGrade * 4)
                 return 'D';
             return 'F';
         }
